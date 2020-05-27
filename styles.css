@@ -1,7 +1,81 @@
-#box {
-  display: none;
+* {
+  padding: 0;
+  margin: 0;  
+  box-sizing: border-box;
+}
+/* centered grid  */
+body {
+  background: #f024;
 }
 
+.grid {
+  width: 650px;
+  height: 200px;
+  margin: 100px auto;
+}
+/* ================  */
+
+
+/* todos list */
+#app {
+  width: 450px;
+  margin: 0 auto;
+}
+
+#box {
+  display: none;
+  height: 270px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 10px 15px rgba(0,0,0,.15);
+  padding: 20px;
+}
+
+#box input  {
+  font-size: 25px;
+  color: rgb(153, 153, 153);
+  border: none;
+  margin: 15px 0 20px;
+}
+
+.pomodoros {
+  height: 130px;
+}
+
+#options {
+  display: flex;
+  justify-content: space-between;
+}
+
+#delete,
+#save,
+#cancel {
+  padding: 10px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(133, 131, 131);
+  font-weight: bold;
+}
+
+.black {  
+  background: rgb(61, 60, 60);
+  color: #fff;
+}
+
+/* ================  */
+/* tasks button */
 #tasks {
-  display: block;
+  display: block;    
+}
+ 
+#tasks button {
+  width: 95%;
+  height: 50px;
+  border: 1px;
+  border-radius: 8px;
+  background: rgb(0, 0, 0,.1);
+  font-weight: bold;
+  font-size: 17px;
+  color: rgb(255, 255, 255,.5);
 }

@@ -7,24 +7,32 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <section class="grid layout">
+    <div id="app">
+      <ul></ul>
+  
+      <div id="box">
+        <input type="text" placeholder="Digite o novo Todo aqui">
+        <div class="pomodoros">
+          <p>eaeaeaeaeaeae</p>
+          <p>eaeaeaeaeaeae</p>
+        </div>
 
-  <div id="app">
-    <ul></ul>
-
-    <div id="box">
-      <input type="text" placeholder="Digite o novo Todo aqui">
-      <div id="options">
-        <button id="delete">Delete</button>
-        <button id="save">Save</button>
-        <button id="cancel">Cancel</button>
+        <div id="options">
+          <button id="delete">Delete</button>
+          <div class="right-side">            
+            <button id="cancel">Cancel</button>
+            <button id="save" class="black">Save</button>
+          </div>
+        </div>
       </div>
+  
+      <div id="tasks">
+        <button id="add-task">Add Task</button>
+      </div>
+  
     </div>
-
-    <div id="tasks">
-      <button id="add-task">Add Task</button>
-    </div>
-    
-  </div>
+  </section>
   
   <script src="script.js"></script>
 </body>

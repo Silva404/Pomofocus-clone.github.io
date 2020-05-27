@@ -39,7 +39,6 @@ function deleteTodo(item) {
 function switchDivs() {
     let e = document.querySelector('#app #tasks #add-task');
     let a = document.querySelector('#box');
-    let i = document.querySelector('#box #cancel');
 
     if (e.style.display === "none") {
       e.style.display = "block";
@@ -50,11 +49,9 @@ function switchDivs() {
     }
 }
 
-
-
 // só serve quando já tiver todos salvo e armazenados.
 // renderTodos();
-taskElement.onclick = switchDivs;
+cancelElement.onclick = switchDivs;
 taskElement.onclick = switchDivs;
 saveElement.onclick = addTodo;
 deleteElement.onclick = deleteTodo;
