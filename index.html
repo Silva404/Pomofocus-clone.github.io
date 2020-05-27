@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises</title>
+</head>
+
+<body>
+  <div id="btn">
+    <button onmouseover="mouseOver(this)" id="eae">teste mouse over</button>
+  </div>
+
+  <div id='eaw'>
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+  </div>
+
+  <script>
+    let buttonElement = document.querySelector('#btn');
+    buttonElement.style.backgroundColor = '#0f0';
+    let btnElemento = document.createElement('button');
+    buttonElement.appendChild(btnElemento);
+    let text = document.createTextNode('clica aquii')
+    btnElemento.appendChild(text);
+
+    buttonElement.onclick = function () {
+      let newButton = document.createElement('button');
+      document.querySelector('#btn').appendChild(newButton);
+      let text = document.createTextNode('clica aquii')
+      newButton.appendChild(text);
+      newButton.style.width = '100px';
+      newButton.style.height = '30px';
+      newButton.style.backgroundColor = '#red';
+
+      return newButton;
+    }
+    function mouseOver(obj) {
+      document.querySelector('#eae').style.backgroundColor = getRandomColor();
+    }
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+
+
+    // ok, essa merda deveria adicionar um novo elemento mas tem algo errado na lógica.
+    let inputElement = document.querySelector([name = nome]);
+    let inputText = inputElement.value;
+
+    let newText = document.createTextNode('text');    
+    document.querySelector('#eaw').appendChild(newText);
+    
+    function adicionar() {
+      newText.appendChild(inputText);
+    }
+
+  </script>
+</body>
+
+</html>
