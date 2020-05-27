@@ -54,6 +54,27 @@ body {
   border-radius: 3px;
 }
 
+.bar ul.divisoria  {
+  width: 470px;
+  margin: 0 auto; 
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.bar ul.divisoria li {
+  width: 20 px;
+  padding: 20px 0;
+  background: none;
+  box-shadow: none;
+}
+
+.bar ul.divisoria li img {
+  width: 25px;
+  height: 25px;
+}
+
 #box {
   display: none;
   height: 270px;
