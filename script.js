@@ -4,10 +4,14 @@
 <button class="botao">eae</button>
 
 
+<div id="app">
+  <input id="nome"/>
+</div>
+
 //02 html
 <a href="Acessar meu log">eaeaeae</a>
 // SCRIPT
-let inputElement = document.querySelector("input [name=nome]");
+let inputElement = document.querySelector("#nome");
 let eae = document.querySelector('button.botao')
 
 
@@ -21,3 +25,9 @@ linkELement.setAttribute('href', 'https://eaeaea.com');
 let textLink = document.createTextNode('Acessar meu log');
 // .appendChild associa um elemento a outro, deixando ele como elemento filho.
 linkELement.appendChild(textLink);
+
+
+//associado a minha div com id app
+let containerElement = document.querySelector('#app')
+containerElement.removeChild(inputElement)
+
