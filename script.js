@@ -13,16 +13,24 @@ function renderTodos(){
   for (todo of todos) {
     let todoElement = document.createElement('li');
     let todoText = document.createTextNode(todo);
+    let pomo = document.createTextNode('div todo');
+    let icon = document.createElement('div');
 
-
+    
 
     todoElement.appendChild(todoText);
+    todoElement.appendChild(pomo);
+    todoElement.appendChild(icon);
     listElement.appendChild(todoElement);
+  }
+
+  if (listElement.style.display === 'none') {
+    listElement.style.display === 'block';
   }
 }
 
 function addTodo () {
-  if (inputElement.value != '' && inputElement.value != null) {
+  if (inputElement.value != '' && inputElement.value != null) {    
     let todoText = inputElement.value;
     todos.push(todoText);
   } 
