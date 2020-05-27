@@ -45,6 +45,8 @@ body {
   font-size: 18px;
 }
 
+
+
 #app ul li div {
   width: 25px;
   height: 25px;
@@ -59,7 +61,6 @@ body {
   margin: 0 auto; 
   list-style: none;
   display: flex;
-  align-content: center;
   justify-content: space-between;
 }
 
@@ -70,13 +71,17 @@ body {
   background: #000;
 }
 
+/* <!-- CORRIGIR O ALINHAMENTO DO TEXTO DEPOIS --> */
 .bar ul.divisoria li {  
+  display: flex;
+  align-content: center;
   width: 20 px;
-  padding: 20px 0;
+  padding: 25px 0;
   background: none;
   box-shadow: none;
   font-size: 18px;
   color: #fff;
+  font-size: 22px;
 }
 
 .bar ul.divisoria li img {
