@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <div id="app">
     <ul></ul>
-    <input type="text" placeholder="Digite o novo Todo aqui">
-    <div class="save">
-      <button>Save</button>
-      <button>Cancel</button>
-    </div>    
-    <button id="add-task">Add Task</button>
+
+    <div id="box">
+      <input type="text" placeholder="Digite o novo Todo aqui">
+      <div id="options">
+        <button id="delete">Delete</button>
+        <button id="save">Save</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="tasks">
+      <button id="add-task">Add Task</button>
+    </div>
+    
   </div>
   
   <script src="script.js"></script>
