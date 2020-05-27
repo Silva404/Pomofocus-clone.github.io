@@ -22,6 +22,10 @@ body {
 }
 /* ================  */
 
+.grid p {
+  width: 470px;
+  margin: 0 auto;
+}
 
 /* todos list */
 #app {
@@ -43,6 +47,7 @@ body {
   padding: 20px 15px; 
   margin: 10px 0;
   font-size: 18px;
+  overflow: hidden;
 }
 
 
@@ -147,7 +152,8 @@ body {
   border-style: dashed;
   border-color: rgb(255, 255, 255,0.4);
   border-radius: 8px;
-  background: rgb(0, 0, 0,.1);
+  background:no-repeat url(images/add.svg) rgb(0, 0, 0,.1) 165px 18px;
+  background-size: 20px;
   font-weight: bold;
   font-size: 18px;
   color: rgb(255, 255, 255,.5);

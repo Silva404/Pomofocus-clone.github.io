@@ -13,13 +13,13 @@ function renderTodos(){
   for (todo of todos) {
     let todoElement = document.createElement('li');
     let todoText = document.createTextNode(todo);
-    let pomo = document.createTextNode('div todo');
+    // let pomo = document.createTextNode('div todo');
     let icon = document.createElement('div');
 
     
 
     todoElement.appendChild(todoText);
-    todoElement.appendChild(pomo);
+    // todoElement.appendChild(pomo);
     todoElement.appendChild(icon);
     listElement.appendChild(todoElement);
   }
