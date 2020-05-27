@@ -18,8 +18,21 @@ body {
 
 /* todos list */
 #app {
-  width: 450px;
+  width: 470px;
   margin: 0 auto;
+}
+
+#app ul {
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  font-weight: bold;
+  background: #fff;
+  color: rgb(87, 80, 80);
+  border-radius: 8px;
+  box-shadow: 1px 10px 15px rgba(0,0,0,.1);
+  padding: 20px; 
+  margin: 10px 0;
 }
 
 #box {
@@ -28,13 +41,14 @@ body {
   background: #fff;
   border-radius: 8px;
   box-shadow: 1px 10px 15px rgba(0,0,0,.15);
-  padding: 20px;
+  padding: 20px;  
 }
 
 #box input  {
   font-size: 25px;
   color: rgb(153, 153, 153);
   border: none;
+  width: 100%;
   margin: 15px 0 20px;
 }
 
@@ -58,7 +72,7 @@ body {
   font-weight: bold;
 }
 
-.black {  
+#save {  
   background: rgb(61, 60, 60);
   color: #fff;
 }
@@ -70,12 +84,13 @@ body {
 }
  
 #tasks button {
-  width: 95%;
-  height: 50px;
-  border: 1px;
+  width: 100%;
+  height: 65px;
+  border-style: dashed;
+  border-color: rgb(255, 255, 255,0.4);
   border-radius: 8px;
   background: rgb(0, 0, 0,.1);
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   color: rgb(255, 255, 255,.5);
 }
