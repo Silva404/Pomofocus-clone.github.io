@@ -1,23 +1,57 @@
-// HTML
+let listElement = document.querySelector('#app ul');
+let inputElement = document.querySelector('#app input');
+let buttonElement = document.querySelector('#app button');
 
-<input type="text" name="name" id="nome" class="popo"/>
-<button class="botao">eae</button>
+let todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+
+function renderTodos() {
+  //apaga tudo que já tinha dentro do list element que é o meu UL, apagando pra sempre começar zerado.
+  listElement.innerHTML = '';
+
+  for (todo of todos) {
+    let todoElement = document.createElement('li');
+    let todoText = document.createTextNode(todo);
+
+    let linkElement = document.createElement('a');
+    linkElement.setAttribute('href', '#')
+    let linkText = document.createTextNode('Excluir');
+
+    let pos = todos.indexOf(todo);
+    linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ') ');
+
+    linkElement.appendChild(linkText);
+
+    todoElement.appendChild(todoText);
+    todoElement.appendChild(linkElement);
+
+    listElement.appendChild(todoElement);
+  }
+}
+
+function addTodo() {
+  let todoText = inputElement.value;
+
+  todos.push(todoText);
+  //apagando o texto do meu input após adicionar o novo item
+  inputElement.value = '';
+  //atualizando a lista de todos
+  renderTodos();
+  saveToStorage()
+}
+
+renderTodos();
+
+function deleteTodo(pos) {
+  todos.splice(pos, 1)
+  renderTodos();
+  saveToStorage()
+}
+
+buttonElement.onclick = addTodo;
+linkElement.onclick = removeTodo();
 
 
-//02 html
-<a href="Acessar meu log">eaeaeae</a>
-// SCRIPT
-let inputElement = document.querySelector("input [name=nome]");
-let eae = document.querySelector('button.botao')
 
-
-//02 script
-// document.createElement  => cria uma espécie de elemento html
-let linkELement = document.createElement('a');
-// .setAttibute => adiciona parametros ao meu elemento criado
-linkELement.setAttribute('href', 'https://eaeaea.com');
-
-// .createTextNode cria um texto que pode ser depois associado a um elemento já criado.
-let textLink = document.createTextNode('Acessar meu log');
-// .appendChild associa um elemento a outro, deixando ele como elemento filho.
-linkELement.appendChild(textLink);
+function saveToStorage() {
+  localStorage.setItem('list_todos', JSON.stringify(todos));
+}
