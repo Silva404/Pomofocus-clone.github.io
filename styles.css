@@ -58,7 +58,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 5px; 
-  font-size: 14px;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 8px 15px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
@@ -85,6 +86,7 @@ body {
 .toolbar ul li:nth-child(3) img{
   height: 26px;
   margin-right: 3px;
+  margin-right: 0;
 }
 
 
