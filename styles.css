@@ -54,6 +54,10 @@ body {
 
 .toolbar ul li {
   margin: 0 10px; 
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  background: rgba(184, 182, 182, 0.15);
 }
 
 /* ========================== */
