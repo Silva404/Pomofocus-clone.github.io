@@ -1,9 +1,14 @@
-let listElement = document.querySelector('#app ul');
-let inputElement = document.querySelector('#app input');
-let taskElement = document.querySelector('#app #add-task');
-let saveElement = document.querySelector('#app #options #save');
-let deleteElement = document.querySelector('#app #options #delete');
-let cancelElement = document.querySelector('#app #options #cancel');
+const listElement = document.querySelector('#app ul');
+const inputElement = document.querySelector('#app input');
+const taskElement = document.querySelector('#app #add-task');
+const saveElement = document.querySelector('#app #options #save');
+const deleteElement = document.querySelector('#app #options #delete');
+const cancelElement = document.querySelector('#app #options #cancel');
+
+const pomodoroElement = document.querySelector('#breaks #pomodoro');
+const shortElement = document.querySelector('#breaks #short');
+const longElement = document.querySelector('#breaks #long');
+
 
 let todos = [];
 
@@ -57,8 +62,18 @@ function switchDivs() {
     }
 }
 
+function switchBColor() {
+  
+}
+
 // só serve quando já tiver todos salvo e armazenados.
 // renderTodos();
+
+pomodoroElement.onclick = switchBColor;
+longElement.onclick = switchBColor;
+shortElement.onclick = switchBColor;
+
+
 cancelElement.onclick = switchDivs;
 taskElement.onclick = switchDivs;
 saveElement.onclick = addTodo;
