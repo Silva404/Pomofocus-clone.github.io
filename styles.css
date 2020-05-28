@@ -54,6 +54,9 @@ body {
 }
 
 .toolbar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 5px; 
   font-size: 14px;
   padding: 8px 15px;
@@ -64,6 +67,26 @@ body {
 .toolbar ul li:last-child {
   margin-right: 0;
 }
+
+.toolbar ul li img {
+  height: 12px;
+  margin-right: 3px;;
+}
+
+.toolbar ul li:nth-child(2) img{
+  height: 15px;
+  margin-right: 3px;;
+}
+
+.toolbar ul li:nth-child(3) {
+  padding: 2px 3px;
+}
+
+.toolbar ul li:nth-child(3) img{
+  height: 26px;
+  margin-right: 3px;
+}
+
 
 .toolbar::after {
   content: '';
