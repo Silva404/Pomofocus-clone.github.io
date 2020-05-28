@@ -6,7 +6,7 @@
 }
 /* centered grid  */
 body {
-  background: rgba(134, 32, 45, 0.267);
+  background: rgba(206, 9, 35, 0.6);
   font-family: ubuntu;
 }
 
@@ -54,11 +54,11 @@ body {
 }
 
 .toolbar ul li {
-  margin: 0 10px; 
+  margin: 0 5px; 
   font-size: 14px;
   padding: 8px 15px;
   border-radius: 4px;
-  background: rgba(184, 182, 182, 0.15);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .toolbar ul li:last-child {
