@@ -23,8 +23,9 @@ body {
 /* ================  */
 
 .grid p {
-  width: 470px;
+  width: 130px;
   margin: 0 auto;
+  color: rgba(248, 248, 248, 0.6);
 }
 
 /* todos list */
@@ -50,13 +51,11 @@ body {
   overflow: hidden;
 }
 
-
-
 #app ul li div {
   width: 25px;
   height: 25px;
   background: no-repeat url(images/more.svg)  2px;
-  background-size: 20px;
+  background-size: 5px;
   border: 10px rgb(0, 0, 0);
   border-radius: 3px;
 }
@@ -69,11 +68,18 @@ body {
   justify-content: space-between;
 }
 
+.bar {
+  position: relative;
+}
 .bar::after {
   content: '';
-  width: 640px;
-  height: 4px;
-  background: #000;
+  position: absolute;
+  width: 72%;
+  top: 75px;
+  left: 90px;
+  margin: 0 auto;
+  height: 2px;
+  background: rgb(255, 255, 255,0.5);
 }
 
 /* <!-- CORRIGIR O ALINHAMENTO DO TEXTO DEPOIS --> */
