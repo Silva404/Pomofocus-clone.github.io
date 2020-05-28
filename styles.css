@@ -36,6 +36,7 @@ body {
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  position: relative;
 }
 
 .toolbar .logo {
@@ -58,6 +59,21 @@ body {
   padding: 8px 15px;
   border-radius: 4px;
   background: rgba(184, 182, 182, 0.15);
+}
+
+.toolbar ul li:last-child {
+  margin-right: 0;
+}
+
+.toolbar::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  left: 0px; 
+  margin: 0 auto;
+  height: 1px;
+  background: rgba(150, 149, 149, 0.2);
 }
 
 /* ========================== */
