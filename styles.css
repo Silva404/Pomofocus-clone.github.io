@@ -28,6 +28,13 @@ body {
   color: rgba(248, 248, 248, 0.6);
 }
 
+/* timer */
+
+
+
+/* ============================ */
+
+
 /* todos list */
 #app {
   width: 470px;
@@ -75,7 +82,7 @@ body {
   content: '';
   position: absolute;
   width: 72%;
-  top: 75px;
+  top: 78px;
   left: 90px;
   margin: 0 auto;
   height: 2px;
@@ -155,6 +162,7 @@ body {
 #tasks button {
   width: 100%;
   height: 65px;
+  margin-top: 10px;
   border-style: dashed;
   border-color: rgb(255, 255, 255,0.4);
   border-radius: 8px;
