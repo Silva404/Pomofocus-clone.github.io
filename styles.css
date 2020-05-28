@@ -18,7 +18,7 @@ body {
 .grid {
   width: 650px;
   height: 200px;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 /* ================  */
 
@@ -28,9 +28,89 @@ body {
   color: rgba(248, 248, 248, 0.6);
 }
 
+/* =============== toolbar ============= */
+
+.toolbar {
+  margin: 15px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.toolbar .logo {
+  display: flex;
+  align-items: center;  
+}
+.toolbar .logo img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.toolbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.toolbar ul li {
+  margin: 0 10px; 
+}
+
+/* ========================== */
+
 /* timer */
+.timer {
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  height: 350px;
+  margin: 0 auto;  
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin: 40px 90px 20px;
+}
 
+.timer ul li,
+.timer button {
+  margin: 20px auto;
+}
 
+.timer ul li {
+  color: #fff;
+}
+
+.timer #breaks {
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer #breaks li {
+  background: rgba(85, 84, 84, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 20px auto 5px;
+}
+
+.timer #clock {
+  font-size: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer #start {
+  padding: 18px 70px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  color: rgba(73, 17, 25, 0.5);
+  border: 10px rgb(175, 30, 30);
+}
+.timer ul {
+  list-style: none;
+}
 
 /* ============================ */
 
@@ -107,7 +187,7 @@ body {
   height: 35px;
   border-radius: 4px;
   padding: 8px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 #box {
