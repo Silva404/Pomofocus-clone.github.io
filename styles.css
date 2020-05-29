@@ -12,7 +12,7 @@ body {
   /* background: #00746e99; */
   /* background: #11588899; */
   font-family: ubuntu;
-  /* transition: background-color 0.8s ease-in-out; */
+  transition: all 0.8s ease;
 }
 
 @font-face {
@@ -148,6 +148,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.8s ease;
 }
 
 .timer #start {

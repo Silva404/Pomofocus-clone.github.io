@@ -13,13 +13,13 @@ const startElement = document.querySelector('div.timer #start')
 
 let todos = [];
 
-function renderTodos(){
+function renderTodos() {
   listElement.innerHTML = '';
 
   for (todo of todos) {
     let todoElement = document.createElement('li');
     let todoText = document.createTextNode(todo);
-    let icon = document.createElement('div');   
+    let icon = document.createElement('div');
 
     todoElement.appendChild(todoText);
     todoElement.appendChild(icon);
@@ -31,11 +31,11 @@ function renderTodos(){
   }
 }
 
-function addTodo () {
-  if (inputElement.value != '' && inputElement.value != null) {    
+function addTodo() {
+  if (inputElement.value != '' && inputElement.value != null) {
     let todoText = inputElement.value;
     todos.push(todoText);
-  } 
+  }
 
   inputElement.value = '';
   renderTodos();
@@ -47,16 +47,16 @@ function deleteTodo(item) {
 }
 
 function switchDivs() {
-    let e = document.querySelector('#app #tasks #add-task');
-    let a = document.querySelector('#box');
+  let e = document.querySelector('#app #tasks #add-task');
+  let a = document.querySelector('#box');
 
-    if (e.style.display === "none") {
-      e.style.display = "block";
-      a.style.display = "none";
-    } else {
-      e.style.display = "none";
-      a.style.display = "block";
-    }
+  if (e.style.display === "none") {
+    e.style.display = "block";
+    a.style.display = "none";
+  } else {
+    e.style.display = "none";
+    a.style.display = "block";
+  }
 }
 
 function changeBcColor(color) {
@@ -65,21 +65,60 @@ function changeBcColor(color) {
   liBackground.style.backgroundColor = "#5554541a"
 }
 
-function startOrStop(){
+function startOrStop() {
   if (startElement.innerText == "START") startElement.innerText = "END";
   else startElement.innerText = "START";
 }
 
-// só serve quando já tiver todos salvo e armazenados.
-// renderTodos();
+// function pomoMode(mode) {
+//   //todos tem a mesma cor de background, só escolher quem é none e qual que tem que ter a cor.
+
+//   if (mode == pomodoro) {
+//     pomodoroElement.style.backgroundColor = "#5554541a";
+//     shortElement.style.backgroundColor = "none";
+//     longElement.style.backgroundColor = "none;"
+
+//     document.body.style.backgroundColor = '#ce092399';
+//     document.querySelector('#clock li').innerText = '25:00';
+//   } 
+// }
+
 
 //botão start ou stop
 startElement.onclick = startOrStop;
 
+// ok não rolou
+// pomodoroElement.onclick = pomoMode(pomodoro);
+
 //mudando a cor dos backgrounds
-pomodoroElement.onclick = () => document.body.style.backgroundColor = "#ce092399";;
-longElement.onclick = () => document.body.style.backgroundColor = "#11588899";
-shortElement.onclick = () => document.body.style.backgroundColor = "#00746e99";
+pomodoroElement.onclick = () => {
+  document.body.style.backgroundColor = '#ce092399';
+  document.querySelector('#clock li').innerText = '25:00';
+
+  pomodoroElement.style.backgroundColor = "#5554541a";
+  shortElement.style.backgroundColor = "none";
+  longElement.style.backgroundColor = "none";
+}
+
+
+shortElement.onclick = () => {
+  document.body.style.backgroundColor = "#00746e99";
+  document.querySelector('#clock li').innerText = '05:00';
+
+  longElement.style.backgroundColor = "none";
+  shortElement.style.backgroundColor = "#5554541a";
+  pomodoroElement.style.backgroundColor = "none";
+}
+
+
+longElement.onclick = () => {
+  document.body.style.backgroundColor = "#11588899";
+  document.querySelector('#clock li').innerText = '10:00';
+
+  longElement.style.backgroundColor = "#5554541a";
+  shortElement.style.backgroundColor = "none";
+  pomodoroElement.style.backgroundColor = "none";
+}
 
 // funcionalidade do tasks
 cancelElement.onclick = switchDivs;
