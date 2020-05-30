@@ -5,6 +5,8 @@ const saveElement = document.querySelector('#app #options #save');
 const deleteElement = document.querySelector('#app #options #delete');
 const cancelElement = document.querySelector('#app #options #cancel');
 
+const inputPomoElement = document.querySelector('#inputPomo');
+
 const pomodoroElement = document.querySelector('#breaks #pomodoro');
 const shortElement = document.querySelector('#breaks #short');
 const longElement = document.querySelector('#breaks #long');
@@ -20,8 +22,11 @@ function renderTodos() {
     let todoElement = document.createElement('li');
     let todoText = document.createTextNode(todo);
     let icon = document.createElement('div');
+    let inputPomo = document.createTextNode(todo);
+
 
     todoElement.appendChild(todoText);
+    todoElement.appendChild(inputPomo);
     todoElement.appendChild(icon);
     listElement.appendChild(todoElement);
   }
@@ -34,7 +39,9 @@ function renderTodos() {
 function addTodo() {
   if (inputElement.value != '' && inputElement.value != null) {
     let todoText = inputElement.value;
+    let pomoText= inputPomoElement.value;
     todos.push(todoText);
+    todos.push(pomoText);
   }
 
   inputElement.value = '';
@@ -93,31 +100,34 @@ startElement.onclick = startOrStop;
 //mudando a cor dos backgrounds
 pomodoroElement.onclick = () => {
   document.body.style.backgroundColor = '#ce092399';
+  document.querySelector('#start').style.color = '#ce092399';
   document.querySelector('#clock li').innerText = '25:00';
 
   pomodoroElement.style.backgroundColor = "#5554541a";
-  shortElement.style.backgroundColor = "none";
-  longElement.style.backgroundColor = "none";
+  shortElement.style.background = "none";
+  longElement.style.background = "none";
 }
 
 
 shortElement.onclick = () => {
   document.body.style.backgroundColor = "#00746e99";
+  document.querySelector('div.timer #start').style.color = '#00746e99';
   document.querySelector('#clock li').innerText = '05:00';
 
-  longElement.style.backgroundColor = "none";
+  longElement.style.background = "none";
   shortElement.style.backgroundColor = "#5554541a";
-  pomodoroElement.style.backgroundColor = "none";
+  pomodoroElement.style.background = "none";
 }
 
 
 longElement.onclick = () => {
   document.body.style.backgroundColor = "#11588899";
+  document.querySelector('div.timer #start').style.color = '#11588899';
   document.querySelector('#clock li').innerText = '10:00';
 
   longElement.style.backgroundColor = "#5554541a";
-  shortElement.style.backgroundColor = "none";
-  pomodoroElement.style.backgroundColor = "none";
+  shortElement.style.background = "none";
+  pomodoroElement.style.background = "none";
 }
 
 // funcionalidade do tasks

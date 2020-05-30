@@ -15,6 +15,10 @@ body {
   transition: all 0.8s ease;
 }
 
+* button {
+  font-family: ubuntu;
+}
+
 @font-face {
   font-family: 'ubuntu';
   src: url('Ubuntu-Medium.ttf');
@@ -136,11 +140,13 @@ body {
   justify-content: space-between;
 }
 
-.timer #breaks li {
-  /* background: #5554541a; */
+.timer #breaks li {  
   padding: 5px 10px;
   border-radius: 4px;
   margin: 20px auto 5px;
+}
+.timer #breaks #pomodoro {
+  background: #5554541a;
 }
 
 .timer #clock {
@@ -158,6 +164,7 @@ body {
   font-weight: bold;
   border-radius: 6px;
   color: rgba(73, 17, 25, 0.5);
+  transition: color 0.5s ease;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
